@@ -1,5 +1,6 @@
 package com.example.test
 
+
 import com.google.cloud.storage.BlobId
 import com.google.cloud.storage.Storage
 import com.google.cloud.storage.StorageOptions
@@ -19,14 +20,14 @@ class Controllers {
     @CrossOrigin
     fun testController(): String {
 
+
         storage = StorageOptions.newBuilder().setProjectId("notional-portal-292519").build().service
         var blob = storage.get(BlobId.of("testing_bucket_data","doc.txt"))
 
-        var temp = File("/tmp/doc.txt")
-//        println("${temp.isDirectory} that temp is a directory")
+        var temp = File("/tmp/test/doc.txt")
 
         blob.downloadTo(temp.toPath())
-        var txt = File("/tmp/doc.txt")
+        var txt = File("/tmp/test/doc.txt")
 
 
 
