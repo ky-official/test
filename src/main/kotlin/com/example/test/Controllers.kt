@@ -19,8 +19,8 @@ class Controllers {
     fun testController(): String {
 
 
-        storage = StorageOptions.newBuilder().setProjectId("audiogram-292422").build().service
-        var blob = storage.get(BlobId.of("audiogram_appdata","doc.txt"))
+        storage = StorageOptions.newBuilder().setProjectId("notional-portal-292519").build().service
+        var blob = storage.get(BlobId.of("testing_bucket_data","doc.txt"))
         return blob.contentType
     }
 }
