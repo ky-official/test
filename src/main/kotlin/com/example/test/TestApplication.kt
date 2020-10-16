@@ -13,8 +13,3 @@ class TestApplication
 fun main(args: Array<String>) {
 	runApplication<TestApplication>(*args)
 }
-@GetMapping("/")
-@CrossOrigin
-fun testController(): String {
-	return "somethhing"
-}
