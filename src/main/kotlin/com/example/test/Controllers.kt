@@ -22,9 +22,10 @@ class Controllers {
         storage = StorageOptions.newBuilder().setProjectId("notional-portal-292519").build().service
         var blob = storage.get(BlobId.of("testing_bucket_data","doc.txt"))
 
-        var temp = File("/tmp")
-        blob.downloadTo(temp.toPath())
+        var temp = File("/tmp/")
+        println("${temp.isDirectory} that temp is a directory")
 
+        blob.downloadTo(temp.toPath())
         var txt = File("/tmp/doc.txt")
 
 
